@@ -27,24 +27,24 @@ public class C03_BestbuyAssertion {
         // 1) Bir class oluşturun: BestBuyAssertions
         // 2) https://www.bestbuy.com/ Adresine gidin farkli test method’lari olusturarak asagidaki testleri yapin
         driver.get("https://www.bestbuy.com/");
-        //		○ Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
+        // Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
         String actualURL=driver.getCurrentUrl();
         String expectedURL="https://www.bestbuy.com/";
 
         Assert.assertEquals("Lutfen test degerlerini gozden gecirin",expectedURL,actualURL);
 
-        //		○ titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+        // titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
         String actualTitle=driver.getTitle();
         String istenmeyenKelime="Rest";
 
         Assert.assertFalse(actualTitle.contains(istenmeyenKelime));
 
 
-        //		○ logoTest => BestBuy logosunun görüntülendigini test edin
+        // logoTest => BestBuy logosunun görüntülendigini test edin
         WebElement logoElementi=driver.findElement(By.xpath("(//img[@alt='Best Buy Logo'])[1]"));
         Assert.assertTrue("Logo gorunmuyor",logoElementi.isDisplayed());
 
-        //		○ FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
+        // FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
         WebElement francais= driver.findElement(By.xpath("//button[text()='Français']"));
 
         Assert.assertTrue(francais.isDisplayed());

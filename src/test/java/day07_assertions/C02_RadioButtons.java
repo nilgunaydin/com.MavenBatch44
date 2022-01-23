@@ -25,10 +25,10 @@ public class C02_RadioButtons {
     public void test01(){
         //https://www.facebook.com adresine gidin
         driver.get("https://www.facebook.com");
-        //Cookies’i kabul edin
-        driver.findElement(By.xpath("//button[text()='Allow All Cookies']")).click();
+      //Cookies’i kabul edin
+       // driver.findElement(By.xpath("//button[text()='Allow All Cookies']")).click();
         //“Create an Account” button’una basin
-        driver.findElement(By.xpath("//a[text()='Create new account']")).click();
+        driver.findElement(By.xpath("//a[text()='Yeni Hesap Oluştur']")).click();
         //“radio buttons” elementlerini locate edin
 
 
@@ -40,6 +40,6 @@ public class C02_RadioButtons {
 
     @After
     public void teardown(){
-        driver.close();
+      //  driver.close();
     }
 }
