@@ -27,7 +27,7 @@ public class C04_BestBuyAyriTestler {
     @Test
     public void urlTesti(){
 
-        //		○ Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
+        //Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
         String actualURL=driver.getCurrentUrl();
         String expectedURL="https://www.bestbuy.com/";
 
@@ -36,7 +36,7 @@ public class C04_BestBuyAyriTestler {
 
     @Test
     public void titleTesti(){
-        //		○ titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+        //titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
         String actualTitle=driver.getTitle();
         String istenmeyenKelime="Rest";
 
@@ -45,14 +45,14 @@ public class C04_BestBuyAyriTestler {
 
     @Test
     public void logoTesti(){
-        //		○ logoTest => BestBuy logosunun görüntülendigini test edin
+        //logoTest => BestBuy logosunun görüntülendigini test edin
         WebElement logoElementi=driver.findElement(By.xpath("(//img[@alt='Best Buy Logo'])[1]"));
         Assert.assertTrue("Logo gorunmuyor",logoElementi.isDisplayed());
     }
 
     @Test
     public void francaisTesti(){
-        //		○ FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
+        //FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
         WebElement francais= driver.findElement(By.xpath("//button[text()='Français']"));
 
         Assert.assertTrue(francais.isDisplayed());
