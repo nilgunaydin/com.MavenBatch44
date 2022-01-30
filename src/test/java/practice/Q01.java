@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Q1 {
+public class Q01 {
    static WebDriver driver;
    static  WebElement aramaKutusu;
    static WebElement sonucSayisi;
